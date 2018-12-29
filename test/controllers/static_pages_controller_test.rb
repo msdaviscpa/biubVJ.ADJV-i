@@ -29,4 +29,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Log in | SampleApp"
   end
+  
+    test "should get site map" do
+    get sitemap_path
+    assert_response :success
+    assert_select "title", "Site Map | SampleApp"
+  end
 end

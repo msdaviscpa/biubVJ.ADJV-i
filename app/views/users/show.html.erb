@@ -1,5 +1,41 @@
-<%= @user.id %></br>
-<%= @user.name %></br>
-<%= @user.email %></br>
-<%= @user.created_at %></br>
-<%= Time.now %></br>
+<% provide(:title, "User 1") %>
+<!DOCTYPE html>
+<html>
+  
+  
+<body>
+<h1><%= yield(:title) %></h1>
+
+
+User ID: <%= @user.id %></br>
+Name: <%= @user.name %></br>
+Email: <%= @user.email %></br>
+
+
+
+<!-- Created at: <%= @user.created_at.to_s("%F %T %Z") %></br>
+<!-- Created at: <%= @user.created_at.strftime("%x") %></br>
+<!-- Created at: <%= @user.created_at.to_date %></br> -->
+
+
+
+
+Created on: <%= @user.created_at.in_time_zone("Eastern Time (US & Canada)").to_date  %></br>
+
+Current Time: <%= Time.now.in_time_zone("Eastern Time (US & Canada)").strftime("%F %I:%M %p %Z")  %></br>
+
+
+  
+  
+  
+
+  <script>
+      let o = new gettimezoneoffset();
+      document.write(7);
+  </script>
+
+
+TO DO: EDIT BUTTON
+TIME (& IP ADDRESS?) OF MOST RECENT 5 LOGINS
+</body>
+</html>

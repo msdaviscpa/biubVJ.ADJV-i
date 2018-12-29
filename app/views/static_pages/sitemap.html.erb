@@ -1,0 +1,42 @@
+<% provide(:title, "Site Map") %>
+<!DOCTYPE html>
+<html>
+  
+  
+  <body>
+    <h1><%= yield(:title) %></h1>
+    
+    <div>
+      <ul>
+        
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Help", '/help' %></li>
+        
+        
+        <li>Users</li>
+        <ul>
+          <li><%= link_to "User Index", '/users/index' %></li2>
+          <li><%= link_to "User1", '/users/1' %></li>
+          <li><%= link_to "New User", '/users/new' %></li>
+        </ul>
+        
+        <li>Access</li>
+        <ul>
+          <li><%= link_to "Log in", '#' %></li2>
+          <li><%= link_to "Log out", '#' %></li2>
+          <li><%= link_to "Log in", '#' %></li2>
+        </ul>
+        <li><%= link_to "Site Map", '/sitemap' %></li>
+      </ul>
+    </div>
+ 
+
+
+    <p></p>
+    <p>Find me in app/views/static_pages/sitemap.html.erb</p>
+
+  </body>
+</html>
+
+
+
